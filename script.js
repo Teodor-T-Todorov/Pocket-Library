@@ -1,3 +1,29 @@
+document.getElementById('button').addEventListener('click', function() 
+{
+    document.querySelector('.popup').style.display = 'flex';
+})
+
+document.querySelector('.close').addEventListener('click', function()
+{
+    document.querySelector('.popup').style.display = 'none';
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function Book(title, author, numberOfPages, hasItBeenRead)
 {
     this.title = title;
