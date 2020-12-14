@@ -48,12 +48,13 @@ body{
 }
 
 .popup-content{
-    height: 40vh;
+    min-height: 45vh;
     width: 75vw;
     background: #fff;
     padding: 5%;
     border-radius: 5px;
     position: relative;
+    margin-right: 2%;
 }
 
 input{
@@ -62,6 +63,22 @@ input{
     width: 90%;
     padding: 3%;
     border: 1px solid gray;
+}
+.radio-wrapper{
+    margin-right: 5px;
+}
+
+.radio-wrapper input[type='radio']{
+    width: 15px;
+}
+
+.radio-wrapper input{
+    display: inline;
+    margin-left: 5px;
+}
+
+.radio-wrapper p{
+    margin-left: 13px;
 }
 
 .button2{
@@ -146,7 +163,7 @@ input{
     }
     
     .popup-content{
-        height: 40vh;
+        min-height: 40vh;
         width: 75vw;
         background: #fff;
         padding: 5%;
@@ -160,6 +177,25 @@ input{
         width: 90%;
         padding: 14px;
         border: 1px solid gray;
+    }
+
+    .radio-wrapper input[type='radio']{
+        width: 15px;
+    }
+
+    .radio-wrapper input{
+        display: inline;
+        margin-left: 5px;
+    }
+
+    .radio-wrapper p{
+        margin-left: 13px;
+    }
+
+    .card{
+        color: white;
+        display: inline-block;
+        margin-top: 50px;
     }
     
     .button2{

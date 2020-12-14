@@ -8,36 +8,17 @@ document.querySelector('.close').addEventListener('click', function()
     document.querySelector('.popup').style.display = 'none';
 })
 
+let library = [];
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function Book(title, author, numberOfPages, hasItBeenRead)
+function Book(title, author, pages, hasItBeenRead)
 {
     this.title = title;
     this.author = author;
-    this.numberOfPages = numberOfPages;
+    this.pages = pages;
     this.hasItBeenRead = hasItBeenRead;
 
     let read = (hasItBeenRead == true) ? 'has been read' : 'not read yet';
     this.read = read;
-}
-
-Book.prototype.info = function()
-{
-    return `${this.title} by ${this.author}, ${this.numberOfPages} pages, ${this.read}`;
 }
 
 function addBookToLibrary(object)
@@ -45,7 +26,34 @@ function addBookToLibrary(object)
     library.push(object);
 }
 
-let library = [];
+const cards = document.querySelector('#cards');
+
+function displayBooks()
+{
+    for(i = 0; i <= library.length; i++)
+    {
+        let card = document.createElement('div');
+
+        let cover = document.createElement('img');
+        cover.setAttribute('src', 'covers/cover.jpg');
+        card.append(cover);
+
+        let titleName = document.createElement('h4');
+        titleName.textContent = library[i].title;
+        card.append(titleName);
+
+        let authorName = document.createElement('p');
+        authorName.textContent = library[i].author;
+        card.append(authorName);
+
+        let numberOfPages = document.createElement('p');
+        numberOfPages.textContent = library[i].pages;
+        card.append(numberOfPages);
+
+        cards.append(card);
+    }
+}
 
 const TheHobbit = new Book('The Hobbit', 'J.R.R. Tolkien', 295, false);
-console.log(TheHobbit.info());
+addBookToLibrary(TheHobbit);
+displayBooks();

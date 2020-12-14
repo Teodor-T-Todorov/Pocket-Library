@@ -19,15 +19,27 @@
     <div class="popup">
         <div class="popup-content">
             <img src="icons/close.png" alt="Close" class="close">
-            <input type="text" placeholder="Author">
             <input type="text" placeholder="Title">
+            <input type="text" placeholder="Author">
             <input type="text" placeholder="Number of pages">
-            <input type="text" placeholder="Has it been read">
-            <a href="#" class="button2">Add Book</a>
+            
+            
+            <div class="radio-wrapper">
+                <p>Has it been read ?</p>
+                <input type="radio" id = "Yes" name="foo">
+                <label for="Yes">Yes</label>
+                <input type="radio" id = "No" name="foo">
+                <label for="No">No</label>
+            </div>
 
+            <a href="#" class="button2">Add Book</a>
         </div>
     </div>
 
+    <div id="cards">
+        
+    </div>
+    
     
     <script src="script.js"></script>
 </body>
