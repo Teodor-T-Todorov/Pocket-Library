@@ -92,10 +92,85 @@ input{
     color: white;
     width: 50%;
     margin: 50px 5px;
+    font-family: Verdana, Tahoma, sans-serif;
+    font-size: small;
+}
+
+.imageContainer{
+    position: relative;
+    width: 100%;
+    height: auto;
 }
 
 .image{
     width: 100%;
+    height: auto;
+}
+
+.image:hover + .deleteButton, .deleteButton:hover{
+    display: block;
+}
+
+.deleteButton{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #555;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    display: none;
+}
+
+.deleteButton:hover{
+    color: red;
+}
+
+.readStatus{
+    float: right;
+    width: 40px;
+    text-align: center;
+    font-size: x-small;
+    margin-top: 6px;
+}
+
+.bookInfo{
+    width: 60%;
+    word-break: break-word;
+}
+
+/*Toggle*/
+.toggle-btn{
+    margin-top: -5px;
+    width: 30px;
+    height: 10px;
+    background: gray;
+    border-radius: 30px;
+    padding: 5px;
+    transition: all 300ms ease-in-out;
+    float:right;
+    cursor: pointer;
+}
+
+.toggle-btn > .checkbox{
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    transition: all 300ms ease-in-out;
+
+}
+
+.toggle-btn.active {
+    background: #00acee;
+}
+
+.toggle-btn.active > .checkbox{
+    margin-left: 20px;
 }
 
 .addBookButton{
@@ -115,18 +190,6 @@ input{
 
 .addBookButton:hover{
     color:#2680d4;
-}
-
-.close{
-    position: absolute;
-    top: -15px;
-    right: -15px;
-    background: #fff;
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    box-shadow: 6px 6px 29px -4px rgba(0,0,0,0.75);
-    cursor: pointer;
 }
 
 /* Desktop */
@@ -221,31 +284,63 @@ input{
         color: white;
         width: 20%;
         margin: 50px 5px;
+        height: 450px;
+        
+    }
+
+    .imageContainer{
+        position: relative;
+        width: 100%;
+        height: auto;
     }
 
     .image{
         width: 100%;
+        height: auto;
     }
 
-    .image:hover{
-        filter: blur(2px);
+    .image:hover + .deleteButton, .deleteButton:hover{
+        display: block;
     }
 
-    
+    .deleteButton{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #555;
+        color: white;
+        font-size: 16px;
+        padding: 12px 24px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        display: none;
+    }
+
+    .readStatus{
+        float: right;
+        width: 42px;
+    }
+
+    .bookInfo{
+        width: 60%;
+    }
+
+    /*Toggle*/
     .toggle-btn{
-        width: 40px;
-        height: 20px;
+        width: 32px;
+        height: 12px;
         background: gray;
         border-radius: 30px;
         padding: 5px;
         transition: all 300ms ease-in-out;
-        float:right;
         cursor: pointer;
     }
 
     .toggle-btn > .checkbox{
-        width: 20px;
-        height: 20px;
+        width: 12px;
+        height: 12px;
         background: #fff;
         border-radius: 50%;
         transition: all 300ms ease-in-out;
@@ -278,18 +373,4 @@ input{
     .addBookButton:hover{
         color:#2680d4;
     }
-
-    .close{
-        position: absolute;
-        top: -15px;
-        right: -15px;
-        background: #fff;
-        height: 20px;
-        width: 20px;
-        border-radius: 50%;
-        box-shadow: 6px 6px 29px -4px rgba(0,0,0,0.75);
-        cursor: pointer;
-    }
-
-    
 }
